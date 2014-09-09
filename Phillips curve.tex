@@ -1,0 +1,19 @@
+\documentclass[tikz, border=10pt]{standalone}
+
+\usetikzlibrary{arrows}
+
+\begin{document}
+	
+	\begin{tikzpicture}[line width=1pt]
+		\draw[->] (0,0) -- (8,0);
+		\draw[->] (0, 0) -- (0, 4);
+		
+		\draw [shift={(7.2, 6.5)}] plot[domain=3.6:4.7,variable=\t]({1*7.3*cos(\t r)+-0.0*7.3*sin(\t r)},{0.0*7.3*cos(\t r)+1.0*7.3*sin(\t r)});
+
+	\begin{scriptsize}
+		\draw (-1.5, 3.8) node {$Inflation~ (procent)$};
+		\draw (8, -0.25) node {$Unemployment ~(procent)$};
+		\draw (3.5, 1.5) node {$Phillips~ curve$};
+	\end{scriptsize}
+\end{tikzpicture}
+\end{document}
