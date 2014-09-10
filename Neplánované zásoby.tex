@@ -1,0 +1,40 @@
+\documentclass[tikz, border=10pt]{standalone}
+
+\usetikzlibrary{arrows}
+
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+
+\begin{document}
+	\begin{tikzpicture}[line width=1pt]
+	
+	\draw[->] (0, 0) -- (0, 4); % Вертикальная линия
+	\draw[->] (0, 0) -- (4, 0); % Горизонтальная линия
+	
+	\draw (0, 2) -- (4, 2);
+	
+	\draw (0, 0) -- (4, 4);
+	
+	\draw[dotted, color=black, opacity=0.5] (1, 1.05) -- (1, 2);
+	\draw[dotted, color=black, opacity=0.5] (2, 0) -- (2, 2);
+	\draw[dotted, color=black, opacity=0.5] (3, 2) -- (3, 3.05);
+	
+	\begin{scriptsize}
+		\draw (-0.35, 4) node {$AD$};
+		\draw (4.3, 2) node {$AD$};
+		
+		\draw (4.6, 4) node {$AD=Y$};
+		
+		\draw (3.7, -0.25) node {$V\text{ý}stup~Y$};
+		
+		\draw (2, -0.25) node {$Y^{*}$};
+		
+		\draw (0.5, 1.5) node {$IU<0$};
+		\draw (3.5, 2.5) node {$IU>0$};
+		
+		\draw (2.2, 1.8) node {$E$};
+	\end{scriptsize}
+	\end{tikzpicture}
+\end{document}
