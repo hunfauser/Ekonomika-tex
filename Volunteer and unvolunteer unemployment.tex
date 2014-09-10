@@ -1,0 +1,53 @@
+\documentclass[tikz, border=10pt]{standalone}
+
+\usetikzlibrary{arrows}
+
+\begin{document}
+	
+	\begin{tikzpicture}[line width=1pt]
+		\draw[->] (0, 0) -- (5, 0); % Горизонтальная линия
+		\draw[->] (0, 0) -- (0, 4); % Вертикальная линия
+	
+		\draw (0, 2.5) -- (4, 2.5);
+		
+		\draw[dashed] (4, 4) -- (4, 0);
+		\draw[dashed] (0, 1.6) -- (2.47, 1.6);
+		
+		\draw (0.5, 0.5) .. controls (3, 2) and (4, 2) .. (4, 4);
+		
+		\draw[->, color=orange] (3, 2.5) .. controls (3, 3.3) and (4, 3.3) .. (4.5, 3.3);
+		\draw[->, color=orange] (3.8, 2.5) .. controls (4, 2) and (4, 2) .. (4.7, 2);
+		
+		\draw [shift={(6.5, 6.3)}] plot[domain=3.5:4.4,variable=\t]({1*6.19*cos(\t r)+-0*6.19*sin(\t r)},{0*6.19*cos(\t r)+1*6.19*sin(\t r)});
+	\begin{scriptsize}
+		\draw[fill=black] (0, 2.5) circle (1.5pt);
+		\draw[fill=black] (4, 2.5) circle (1.5pt);
+		
+		\draw[fill=black] (3.63, 2.5) circle (1.5pt);
+		\draw[fill=black] (1.6, 2.5) circle (1.5pt);
+		\draw[fill=black] (2.47, 1.6) circle (1.5pt);
+		
+		\draw (-0.25, 4) node {$W$};
+		\draw (-0.1, -0.1) node {$0$};
+		
+		\draw (-0.25, 2.5) node {$W^{'}$};
+		\draw (-0.25, 1.6) node {$W_E$};
+		\draw (4, -0.25) node {$L^*$};
+		
+		\draw (0.25, 2.7) node {$M$};
+		\draw (1.7, 2.7) node {$N$};
+		\draw (3.55, 2.7) node {$O$};
+		\draw (4.2, 2.7) node {$P$};
+		
+		\draw (2.45, 1.4) node {$E$};
+		
+		\draw (1, 4) node {$D_L$};
+		\draw (3.7, 4) node {$S_L$};
+		
+		\draw (0.9, 2.3) node {$Employed$};
+		\draw (6.4, 3.3) node {$￼Unvolunteer~unemployment$};
+		\draw (6.4, 2) node {$￼Volunteer~unemployment$};
+	
+	\end{scriptsize}
+\end{tikzpicture}
+\end{document}
