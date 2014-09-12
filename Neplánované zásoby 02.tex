@@ -1,0 +1,50 @@
+\documentclass[tikz, border=12pt]{standalone}
+
+\usetikzlibrary{arrows}
+
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+
+\begin{document}
+	\begin{tikzpicture}[line width=1pt]
+		\draw[->] (0, 0) -- (5, 0);
+		\draw[->] (0, 0) -- (0, 5);
+	
+		\draw (0, 0) -- (5, 5);
+		
+		\draw (0, 2.5) -- (5, 2.5);
+		
+		\draw[dotted] (0, 1.25) -- (1.25, 1.25);
+		\draw[dotted] (0, 3.75) -- (3.75, 3.75);
+		
+		\draw[dash pattern=on 2pt off 4pt on 6pt off 4pt] (1.25, 0) -- (1.25, 1.25);
+		\draw[dash pattern=on 2pt off 4pt on 6pt off 4pt] (3.75, 0) -- (3.75, 2.5);
+		\draw[line width=4.2, dotted] (3.75, 2.5) -- (3.75, 3.75);
+		\draw[dash pattern=on 2pt off 4pt on 6pt off 4pt] (2.5, 0) -- (2.5, 2.5);
+		
+		\draw[line width=4.2, dotted] (1.25, 1.25) -- (1.25, 2.5);
+		
+		\draw[<->, color=orange] (4, 3) -- (6, 4);
+		\draw[<->, color=orange] (0.5, -1) .. controls (0.5, 2) and (0.5, 2) .. (1.1, 1.95);
+		
+		\begin{scriptsize}
+			\draw (-0.35, 5) node {$\textbf{AD}$};
+			\draw (5, -0.25) node {$\textbf{Výstup Y}$};
+			\draw (6.1, 2.5) node {$\textbf{AD} (konstantní)$};
+			\draw (6.3, 5) node {$\textbf{AD = Y} (45^o sklon)$};
+			
+			\draw (-0.35, 3.75) node {$150$};
+			\draw (-0.35, 2.5) node {$100$};
+			\draw (-0.3, 1.25) node {$50$};
+			
+			\draw (1.25, -0.25) node {$50$};
+			\draw (2.5, -0.25) node {$Y_0 = 100$};
+			\draw (3.75, -0.25) node {$150$};
+			
+			\draw (7.6, 4) node {$\text{Nezaplánované zásoby +}$};
+			\draw (1, -1.25) node {$\text{Nezaplánované zásoby -}$};
+		\end{scriptsize}
+\end{tikzpicture}
+\end{document}

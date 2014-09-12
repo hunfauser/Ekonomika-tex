@@ -1,0 +1,73 @@
+\documentclass[tikz, border=10pt]{standalone}
+
+\usetikzlibrary{arrows}
+
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+
+\begin{document}
+	\begin{tikzpicture}[line width=1pt]
+	
+	\draw[->] (0, 0) -- (6, 0); % Горизонтальная линия
+	\draw[->] (0, 0) -- (0, 4.5); % Вертикальная линия
+	
+	\draw[dashed] (0, 0) -- (4.5, 4.5);
+	\draw (0, 0.75) -- (4.75, 4);
+	
+	\draw[fill=black] (0, 0.75) circle (2pt); 
+	\draw[fill=black] (0, 1.5) circle (2pt);
+	\draw[fill=black] (0, 1.9) circle (2pt); 
+	\draw[fill=black] (0, 2.3) circle (2pt);
+	\draw[fill=black] (0, 3) circle (2pt);
+	\draw[fill=black] (0, 3.8) circle (2pt);
+	
+	\draw[fill=black] (1.05, 0) circle (2pt); 
+	\draw[fill=black] (1.6, 0) circle (2pt);
+	\draw[fill=black] (2.3, 0) circle (2pt); 
+	\draw[fill=black] (3.3, 0) circle (2pt);
+	\draw[fill=black] (4.4, 0) circle (2pt);
+	
+	\draw[fill=black] (1.05, 1.5) circle (2pt); 
+	\draw[fill=black] (1.6, 1.9) circle (2pt);
+	\draw[fill=black] (2.3, 2.3) circle (2pt); 
+	\draw[fill=black] (3.3, 3) circle (2pt);
+	\draw[fill=black] (4.4, 3.8) circle (2pt);
+	
+	\draw[dotted] (0, 1.5) -- (1.05, 1.5) -- (1.05, 0);
+    \draw[dotted] (0, 1.9) -- (1.6, 1.9) -- (1.6, 0);
+    \draw[dotted] (0, 2.3) -- (2.3, 2.3) -- (2.3, 0);
+    \draw[dotted] (0, 3) -- (3.3, 3) -- (3.3, 0);
+    \draw[dotted] (0, 3.8) -- (4.4, 3.8) -- (4.4, 0);
+    
+    \draw [shift={(0, 0)}] (0, 0) -- (0 : 0.6) arc (0 : 45 : 0.6) -- cycle;
+
+	\begin{scriptsize}
+		\draw (-0.5, 0.75) node {$100$};
+		\draw (-0.5, 1.5) node {$340$};
+		\draw (-0.5, 1.9) node {$500$};
+		\draw (-0.5, 2.3) node {$660$};
+		\draw (-0.5, 3) node {$820$};
+		\draw (-0.5, 3.8) node {$1140$};
+		
+		\draw (1.05, -0.25) node {$300$};
+		\draw (1.6, -0.25) node {$500$};
+		\draw (2.3, -0.25) node {$700$};
+		\draw (3.3, -0.25) node {$900$};
+		\draw (4.4, -0.25) node {$1300$};
+		
+		\draw (1.05, 1.7) node {$F$};
+		\draw (1.6, 2.1) node {$E$};
+		\draw (2.3, 2.5) node {$G$};
+		\draw (4.9, 4) node {$C$};
+		
+		\draw (0.8, 0.3) node {$45^\circ$};
+		
+		\draw (0, 4.7) node {$\text{Spotřeba (mld. Kč)}$};
+		\draw (5.9, 0.25) node {$\text{Disponibilní~důchod}$};
+		\draw (5.5, -0.25) node {$(mld. Kč)$};
+		
+	\end{scriptsize}
+	\end{tikzpicture}
+\end{document}

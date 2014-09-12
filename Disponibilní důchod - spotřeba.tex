@@ -1,0 +1,36 @@
+\documentclass[tikz, border=10pt]{standalone}
+
+\usetikzlibrary{arrows}
+
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+
+\begin{document}
+	\begin{tikzpicture}[line width=1pt]
+	
+	\draw[->] (0, 0) -- (6, 0); % Горизонтальная линия
+	\draw[->] (0, 0) -- (0, 4.5); % Вертикальная линия
+	
+	\draw[dashed] (0, 0) -- (4.5, 4.5);
+	
+	\draw (0, 0.5) -- (4.75, 3.75);
+	\draw (0, 1.25) -- (4.75, 4.5);
+	
+	\draw[->, color=orange] (1, 1.3) -- (1, 1.85);
+	\draw[->, color=orange] (2.5, 2.3) -- (2.5, 2.85);
+	\draw[->, color=orange] (4, 3.3) -- (4, 3.95);
+    
+    \draw [shift={(0, 0)}] (0, 0) -- (0 : 0.6) arc (0 : 45 : 0.6) -- cycle;
+
+	\begin{scriptsize}
+		
+		\draw (0.8, 0.3) node {$45^\circ$};
+		
+		\draw (0, 4.7) node {$\text{Spotřeba}$};
+		\draw (5.9, 0.25) node {$\text{Disponibilní~důchod}$};
+		
+	\end{scriptsize}
+	\end{tikzpicture}
+\end{document}
