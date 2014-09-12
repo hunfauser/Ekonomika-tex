@@ -1,0 +1,53 @@
+\documentclass[tikz, border=10pt]{standalone}
+
+\usetikzlibrary{arrows}
+
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+
+\begin{document}
+	\begin{tikzpicture}[line width=1pt]
+	
+		\draw[->] (0, 0) -- (6, 0); % Горизонтальная линия
+		\draw[->] (0, 0) -- (0, 5); % Вертикальная линия
+		
+		\draw (3, 0) -- (3, 4);
+		\draw (2, 0) -- (2, 4);
+		
+		\draw [shift={(6.6, 8)}] plot[domain=3.8:4.5,variable=\t]({1*7.16*cos(\t r)+-0*7.16*sin(\t r)},{0*7.16*cos(\t r)+1*7.16*sin(\t r)});
+		
+		\draw[dashed] (3, 1.79) -- (0, 1.79);
+		\draw[dashed] (0, 2.5) -- (2, 2.5);
+		
+		\draw[<-] (2.1, 1)-- (2.9, 1);
+		
+		\begin{scriptsize}
+		
+		\draw [fill=black] (0, 2.5) circle (1.5pt);
+		\draw [fill=black] (3, 0) circle (1.5pt);
+		\draw [fill=black] (0, 1.79) circle (1.5pt);
+		\draw [fill=black] (2, 0) circle (1.5pt);
+		\draw [fill=black] (2, 2.5) circle (1.5pt);
+		\draw [fill=black] (3, 1.79) circle (1.5pt);
+		
+		\draw (-0.25, 5) node {$i$};
+		\draw (-0.25, 2.5) node {$i_1$};
+		\draw (-0.25, 1.79) node {$i_0$};
+		
+		\draw (6, -0.25) node {$M$};
+		\draw (2, -0.25) node {$M_1$};
+		\draw (3, -0.25) node {$M_0$};
+		
+		\draw (3.2, 2) node {$E_0$};
+		\draw (2.25, 2.65) node {$E_1$};
+		
+		\draw (3.35, 4) node {$MS_0$};
+		\draw (1.7, 4) node {$MS_1$};
+		
+		\draw (5, 1.2) node {$MD$};
+
+		\end{scriptsize}
+		\end{tikzpicture}
+\end{document}
