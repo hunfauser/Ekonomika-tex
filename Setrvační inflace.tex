@@ -1,0 +1,62 @@
+\documentclass[tikz, border=10pt]{standalone}
+
+\usetikzlibrary{arrows}
+
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+
+\begin{document}
+	\begin{tikzpicture}[line width=1pt]
+	
+		\draw[->] (0, 0) -- (6, 0);    % Горизонтальная линия
+		\draw[->] (0, 0) -- (0, 4.5); % Вертикальная линия
+	
+		\draw (3, 0) -- (3, 4.5);
+		
+		\draw [shift={(6, 7.7)}] plot[domain=3.65:4.6,variable=\t]({1*5.53*cos(\t r)+0*5.53*sin(\t r)},{0*5.53*cos(\t r)+1*5.53*sin(\t r)});
+		\draw [shift={(5.6, 7.1)}] plot[domain=3.65:4.6,variable=\t]({1*5.53*cos(\t r)+0*5.53*sin(\t r)},{0*5.53*cos(\t r)+1*5.53*sin(\t r)});
+		\draw [shift={(5.2, 6.4)}] plot[domain=3.65:4.6,variable=\t]({1*5.53*cos(\t r)+0*5.53*sin(\t r)},{0*5.53*cos(\t r)+1*5.53*sin(\t r)});
+		
+		\draw [shift={(0.35, 6.3)}] plot[domain=4.8:6,variable=\t]({1*4.19*cos(\t r)+0*4.19*sin(\t r)},{0*4.19*cos(\t r)+1*4.19*sin(\t r)});
+		\draw [shift={(0.85, 5.8)}] plot[domain=4.63:5.87,variable=\t]({1*4.19*cos(\t r)+0*4.19*sin(\t r)},{0*4.19*cos(\t r)+1*4.19*sin(\t r)});
+		\draw [shift={(1.4, 5.2)}] plot[domain=4.63:5.87,variable=\t]({1*4.19*cos(\t r)+0*4.19*sin(\t r)},{0*4.19*cos(\t r)+1*4.19*sin(\t r)});
+	
+		\draw [dotted] (0, 1.33) -- (3, 1.33);
+		\draw [dotted] (0, 2.23) -- (3, 2.23);
+		\draw [dotted] (0, 3.05) -- (3, 3.05);
+		
+		\draw[->] (-0.7, 1.37)-- (-0.7, 2.2);
+		\draw[->] (-0.7, 2.3)-- (-0.7, 3);
+
+	\begin{scriptsize}
+	
+		\draw [fill=black] (3, 1.33) circle (1.5pt);
+		\draw [fill=black] (3, 2.23) circle (1.5pt);
+		\draw [fill=black] (3, 3.05) circle (1.5pt);
+		
+		\draw (-0.25, 4.5) node {$P$};
+		\draw (-0.25, 1.33) node {$P_1$};
+		\draw (-0.25, 2.23) node {$P_2$};
+		\draw (-0.25, 3.05) node {$P_3$};
+		
+		\draw (6, -0.25) node {$Y$};
+		\draw (3, -0.25) node {$Y^*$};
+		
+		\draw (3, 4.8) node {$LAS$};
+		\draw (4.4, 5.4) node {$SAS_3$};
+		\draw (4.7, 4.3) node {$SAS_2$};
+		\draw (5.3, 3.7) node {$SAS_1$};
+		
+		\draw (5.7, 2.2) node {$AD_3$};
+		\draw (5.3, 1.6) node {$AD_2$};
+		\draw (4.9, 0.9) node {$AD_1$};
+		
+		\draw (3.2, 1.05) node {$E_1$};
+		\draw (3.4, 2.23) node {$E_2$};
+		\draw (3.4, 3.05) node {$E_3$};
+		
+	\end{scriptsize}
+\end{tikzpicture}
+\end{document}

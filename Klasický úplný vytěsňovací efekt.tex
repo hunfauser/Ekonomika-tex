@@ -1,0 +1,65 @@
+\documentclass[tikz, border=10pt]{standalone}
+
+\usetikzlibrary{arrows}
+
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+
+\begin{document}
+	\begin{tikzpicture}[line width=1pt]
+	
+		\draw[->] (0, 0) -- (7, 0); % Горизонтальная линия
+		\draw[->] (0, 0) -- (0, 6); % Вертикальная линия
+	
+		\draw (1, 1) -- (5.5, 4.5);
+		
+		\draw (1, 6) -- (6, 1);
+		\draw (0.5, 4.5) -- (4.5, 0.5);
+		
+		\draw[dashed] (0, 3.2) -- (3.8, 3.2);
+		\draw[dashed] (0, 2.32) -- (2.7, 2.32);
+		
+		\draw[dashed] (1.8, 0) -- (1.8, 3.2);
+		\draw[dashed] (2.7, 0) -- (2.7, 2.32);
+		\draw[dashed] (3.8, 0) -- (3.8, 3.2);
+		
+		
+	\begin{scriptsize}
+	
+		\draw [fill=black] (3.8, 3.2) circle (1.5pt);
+		\draw [fill=black] (2.7, 2.32) circle (1.5pt);
+		\draw [fill=black] (1.8, 3.2) circle (1.5pt);
+		
+		\draw [fill=black] (0, 3.2) circle (1.5pt);
+		\draw [fill=black] (0, 2.32) circle (1.5pt);
+		
+		\draw [fill=black] (1.8, 0) circle (1.5pt);
+		\draw [fill=black] (2.7, 0) circle (1.5pt);
+		\draw [fill=black] (3.8, 0) circle (1.5pt);
+		
+		\draw (-0.25, 6) node {$I$};
+		\draw (-0.25, 3.2) node {$I_2$};
+		\draw (-0.25, 2.32) node {$I_1$};
+		
+		\draw (1.8, -0.25) node {$K_2$};
+		\draw (2.7, -0.25) node {$K_1 = S_1$};
+		\draw (3.8, -0.25) node {$S_2$};
+		\draw (7, -0.25) node {$K, S$};		
+		
+		\draw (2.7, 3.4) node {$Q$};
+		\draw (2.7, 2.6) node {$E_1$};
+		\draw (4.1, 3.15) node {$E_2$};
+		
+		\draw (5.7, 4.5) node {$KS$};
+		\draw (6.4, 1) node {$KD_2$};
+		\draw (4.8, 0.5) node {$KD_1$};
+		
+		\draw (8.5, 5) node {$\textbf{Klasický úplný vytěsňovací efekt}$};
+		\draw (8.53, 4.7) node {$\text{KD (D do kapitálu) = D do úsporách}$};
+		\draw (7.85, 4.4) node {$\text{KS (S kapitálu) = S úspor}$};
+
+\end{scriptsize}
+\end{tikzpicture}
+\end{document}
