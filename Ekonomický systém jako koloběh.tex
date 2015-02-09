@@ -1,0 +1,139 @@
+\documentclass[tikz, border=10pt]{standalone}
+
+\usetikzlibrary{arrows}
+
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+
+\begin{document}
+	\begin{tikzpicture}[line width=1pt]
+
+		\draw (0, 0) -- (0, 1) -- (2, 1) -- (2, 0) -- cycle;
+		\draw (0, -2) -- (0, -1) -- (2, -1) -- (2, -2) -- cycle;
+		\draw (0, -4) -- (0, -3) -- (2, -3) -- (2, -4) -- cycle;
+		\draw (0, -6) -- (0, -5) -- (2, -5) -- (2, -6) -- cycle;
+		
+		\draw (-2, -4) -- (-2, -3) -- (-4, -3) -- (-4, -4) -- cycle;
+		\draw (4, -4) -- (4, -3) -- (6, -3) -- (6, -4) -- cycle;
+
+
+		% СТРЕЛКИ
+		\draw[->] (-3.3, -3) -- (-3.3, 0.6) -- (0, 0.6);
+		\draw[<-] (-3.1, -3) -- (-3.1, 0.4) -- (0, 0.4);
+		
+		\draw[->] (5.3, -3) -- (5.3, 0.6) -- (2, 0.6);
+		\draw[<-] (5.1, -3) -- (5.1, 0.4) -- (2, 0.4);
+		
+		
+		\draw[->] (1.1, -1) -- (1.1, 0);
+		\draw[<-] (0.9, -1) -- (0.9, 0);
+		
+		
+		\draw[->] (-2, -3.4) -- (0, -3.4);
+		\draw[<-] (-2, -3.6) -- (0, -3.6);
+		
+		\draw[->] (2, -3.4) -- (4, -3.4);
+		\draw[<-] (2, -3.6) -- (4, -3.6);
+		
+		\draw[<->] (2, 0.2) -- (2.4, 0.2) -- (2.4, -3.2) -- (2, -3.2);
+		\draw[<->] (0, 0.2) -- (-0.4, 0.2) -- (-0.4, -5.3) -- (0, -5.3);
+		
+		
+		\draw[<-] (-2.7, -3) -- (-2.7, -1.6) -- (0, -1.6);
+		\draw[->] (-2.9, -3) -- (-2.9, -1.4) -- (0, -1.4);
+		
+		\draw[->] (4.9, -3) -- (4.9, -1.4) -- (2, -1.4);
+		\draw[<-] (4.7, -3) -- (4.7, -1.6) -- (2, -1.6);
+		
+		
+		\draw[<-] (-3.1, -4) -- (-3.1, -5.7) -- (0, -5.7);
+		\draw[->] (-2.9, -4) -- (-2.9, -5.5) -- (0, -5.5);
+		
+		\draw[->] (5.1, -4) -- (5.1, -5.7) -- (2, -5.7);
+		\draw[<-] (4.9, -4) -- (4.9, -5.5) -- (2, -5.5);
+	
+	\begin{scriptsize}
+		\draw (1, 0.5) node {$\text{Stát}$};
+		\draw (1, -1.5) node {$\text{Finanční trhy}$};
+		
+		\draw (1, -3.25) node {$\text{Trhy}$};
+		\draw (1, -3.51) node {$\text{ekonomických}$};
+		\draw (1, -3.75) node {$\text{statků}$};
+		
+		\draw (1, -5.38) node {$\text{Trh výrobních}$};
+		\draw (1, -5.62) node {$\text{faktorů}$};
+		
+		\draw (-3, -3.5) node {$\text{Domácnosti}$};
+		\draw (5, -3.5) node {$\text{Firmy}$};
+		
+		
+		\draw (-1.8, 0.8) node {$\text{Daně a jiné odvody}$};
+		\draw (-1.8, 0.2) node {$\text{Transfery}$};
+		
+		\draw (3.8, 0.8) node {$\text{Daně a jiné odvody}$};
+		\draw (3.8, 0.2) node {$\text{Subvence, dotace}$};
+		
+		\draw (0.4, -0.5) node {$\text{Úroky}$};
+		\draw (1.6, -0.5) node {$\text{Půjčky}$};
+		
+		\draw (-1.8, -1.2) node {$\text{Úspory}$};
+		\draw (-1.8, -1.8) node {$\text{Úroky}$};
+		
+		\draw (3.8, -1.2) node {$\text{Úroky}$};
+		\draw (3.8, -1.8) node {$\text{Úvěry}$};
+		
+		\draw (-1.2, -3.2) node {$\text{Platby}$};
+		\draw (-1.2, -3.8) node {$\text{Poptávka}$};
+		
+		\draw (3.2, -3.2) node {$\text{Příjmy}$};
+		\draw (3.2, -3.8) node {$\text{Nabídka}$};
+		
+		
+		\draw (-1.5, -5.2) node {$\text{Nabídka}$};
+		\draw (-1.5, -6) node {$\text{Důchody}$};
+		
+		\draw (3.5, -5.2) node {$\text{Poptávka}$};
+		\draw (3.5, -6) node {$\text{Náklady}$};
+		
+%	
+%	\draw (1.5, 3.25) node {$\text{Domácnosti}$};
+%	\draw (7, 3.25) node {$\text{Vláda}$};
+%	\draw (12.5, 3.25) node {$\text{Firmy}$};
+%	
+%	\draw (7, 1.5) node {$\text{Trh statků a služeb}$};
+%	\draw (7, -0.25) node {$\text{Zahraničí}$};
+%	
+%	\draw (3, 5.4) node {$\text{Práce, půda, kapitál}$};
+%	\draw (3.4, 4.6) node {$\text{Odměny za výrobní faktory}$};
+%	
+%	\draw (7.7, 4) node {$\text{Úvěry}$};
+%	\draw (6.3, 4) node {$\text{Půjčky}$};
+%	
+%	\draw (11, 5.4) node {$\text{Mzdy, renty, úroky}$};
+%	\draw (11, 4.6) node {$\text{Výrobní vstupy}$};
+%	
+%	\draw (4.25, 3.6) node {$\text{Daně}$};
+%	\draw (4.25, 2.8) node {$\text{Transfery}$};
+%	
+%	\draw (9.75, 3.6) node {$\text{Daně}$};
+%	\draw (9.75, 2.8) node {$\text{Dotace}$};
+%	
+%	\draw (5.25, 2.35) node {$\text{Platba za vládní nákupy}$};
+%	\draw (9, 2.35) node {$\text{Nakoupené statky a služby}$};
+%	
+%	\draw (3.3, 1.75) node {$\text{Nakoupené statky a služby}$};
+%	\draw (3, 1.15) node {$\text{Výdaje na nákup statků a služeb}$};
+%	
+%	\draw (11, 1.75) node {$\text{Příjmy z prodeje}$};
+%	\draw (11, 1.15) node {$\text{Prodané statky a služby}$};
+%	
+%	\draw (5.65, 0.5) node {$\text{Import}$};
+%	\draw (8.45, 0.5) node {$\text{Export}$};
+%	
+%	\draw (2.45, -0.75) node {$\text{Tok sboží, služeb a výrobních faktorů}$};
+%	\draw (11.45, -0.75) node {$\text{Tok peněz (korun)}$};
+	\end{scriptsize}
+	\end{tikzpicture}
+\end{document}
