@@ -1,0 +1,46 @@
+\documentclass[tikz, border=10pt]{standalone}
+
+\usetikzlibrary{arrows}
+
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+
+\begin{document}
+	\begin{tikzpicture}[line width=1pt]
+	
+		\draw (0, 0) -- (0, 1) -- (2, 1) -- (2, 0) -- cycle;
+		
+		
+		\draw (-4, -2.5) -- (-4, -1.5) -- (-2, -1.5) -- (-2, -2.5) -- cycle;
+		\draw (4, -2.5) -- (4, -1.5) -- (6, -1.5) -- (6, -2.5) -- cycle;
+		
+		
+		\draw (1, -2) ellipse (1);
+
+
+		% СТРЕЛКИ
+		\draw[->] (0, 0.5) -- (-3, 0.5) -- (-3, -1.5);
+		\draw[->] (2, 0.5) -- (5, 0.5) -- (5, -1.5);
+		
+		
+		\draw[->] (1, 0) -- (1, -1);
+		
+		
+		\draw[->] (-2, -2) -- (0, -2);
+		\draw[<-] (2, -2) -- (4, -2);
+		
+		
+		\begin{scriptsize}
+			\draw (1, 0.5) node {$\text{Cena}$};
+			\draw (-3, -2) node {$\text{Výrobce}$};
+			\draw (1, -2) node {$\text{Trh}$};
+			\draw (5, -2) node {$\text{Spotřebitel}$};
+			
+			
+			\draw (-1, -1.8) node {$\text{Nabídka}$};
+			\draw (3, -1.8) node {$\text{Poptávka}$};
+		\end{scriptsize}
+	\end{tikzpicture}
+\end{document}

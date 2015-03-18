@@ -1,0 +1,40 @@
+\documentclass[tikz, border=10pt]{standalone}
+
+\usetikzlibrary{arrows}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}  
+
+\begin{document}
+	\begin{tikzpicture}
+		\draw[->] (0, 0) -- (5, 0);
+		\draw[->] (0, 0) -- (0, 5);
+		
+		\draw (0.5, 4.75)-- (4.75, 0.5); % DEMAND
+		\draw (0.5, 0.5)-- (4.75, 4.75); % SUPPLY
+		
+		\draw (1.75, 3.5)-- (3.5, 3.5); % Přebytek
+		\draw (1.75, 1.75)-- (3.5, 1.75); % Nedostatek
+		
+		\draw[dashed] (0, 2.625)-- (2.625, 2.625); % Přebytek
+		\draw[dashed] (2.625, 2.625)-- (2.625, 0); % Nedostatek
+
+	\begin{scriptsize}
+		\draw [fill=black] (0, 2.625) circle (1.5pt); % P1
+		\draw [fill=black] (2.625, 0) circle (1.5pt); % Q1
+	
+		\draw (0, 5.25) node {$P (Price)$};
+		\draw (5, -0.25) node {$Q (Quantity)$};
+		
+		\draw (-0.25, 2.625) node {$P$};
+		\draw ( 2.625, -0.25) node {$Q$};
+		
+		\draw (4.75, 0.25) node {$S$};
+		\draw (4.75, 5) node {$D$};
+		
+		\draw (2.6, 3.75) node {$Přebytek$};
+		\draw (2.6, 1.5) node {$Nedostatek$};
+		\draw (1, 2.8) node {$Rovnovaha$};
+	\end{scriptsize}
+	\end{tikzpicture}
+\end{document}

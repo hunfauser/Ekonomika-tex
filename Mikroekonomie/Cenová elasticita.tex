@@ -1,0 +1,51 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}  
+
+% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma}                                    % "Умная" запятая
+
+% Шрифты
+\usepackage{euscript} % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
+
+% Убрать вертикальный отступ у списков
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage{graphicx}
+
+\title{Statistika}
+\author{Hun Fauser}
+\date{\today}
+
+\begin{document} % Конец преамбулы, начало текста.
+
+\maketitle
+
+\section{Cenová elasticita}
+
+\begin{align*}
+	E_{D} &= \frac{ \%  \bigtriangleup Q}{\%  \bigtriangleup P} \\ \\
+	E_{D} &= \frac{ \%  \bigtriangleup poptávaného~zboží}{\%  \bigtriangleup ceny} \\ \\
+	E_{D} &= \frac{\dfrac{\bigtriangleup Q}{Q}}{\dfrac{\bigtriangleup P}{P}} 
+	= \frac{\bigtriangleup Q}{\bigtriangleup P} \times \frac{P}{Q}
+	= \frac{Q_{2} - Q_{1}}{P_{1} - P_{2}} \times \frac{P_{1}}{Q_{1}}
+\end{align*} \\
+
+\begin{itemize}
+	\item elastická $E_{D} > 1$
+	\item neelastická, $E_{D} < 1$
+	\item dokonale elastická, $E_{D} = \infty$
+	\item dokonale neelastická, $E_{D} = 0$
+\end{itemize}
+
+\end{document} % Конец текста.
